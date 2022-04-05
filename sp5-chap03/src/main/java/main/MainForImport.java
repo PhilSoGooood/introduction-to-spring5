@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import assembler.Assembler;
-import config.AppCtx;
+import config.AppConfImport;
 import spring.ChangePasswordService;
 import spring.DuplicateMemberException;
 import spring.MemberInfoPrinter;
@@ -19,12 +19,12 @@ import spring.RegisterRequest;
 import spring.VersionPrinter;
 import spring.WrongIdPasswordException;
 
-public class MainForSpring {
+public class MainForImport {
 
 	private static ApplicationContext ac = null;
 
 	public static void main(String[] args) throws IOException {
-		ac = new AnnotationConfigApplicationContext(AppCtx.class);
+		ac = new AnnotationConfigApplicationContext(AppConfImport.class);
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			System.out.println("명령어를 입력하세요:");
